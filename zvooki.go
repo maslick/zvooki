@@ -81,7 +81,7 @@ func (api *RestController) initRouter() *gin.Engine {
 	router.Use(static.Serve("/", static.LocalFile("./static", true)))
 
 	public := router.Group("/")
-	public.GET("/sound/:id", api.soundHandler)
+	public.GET("/media/:id", api.soundHandler)
 	return router
 }
 
